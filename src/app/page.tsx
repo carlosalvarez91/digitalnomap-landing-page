@@ -1,17 +1,23 @@
 "use client"
 import Image from "next/image";
-import Link from "next/link";
 import Header from "./components/header";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 
 export default function Home() {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
-    <>
+    <div className="h-screen">
     <Header />
-    
     <section className="relative">
     <div className="px-4 pt-10 mx-auto max-w-7xl md:pt-16 flex flex-col md:flex-row">
       <div className="w-full pb-5 mx-auto text-center md:w-1/2 flex flex-col justify-center">
@@ -23,7 +29,7 @@ export default function Home() {
           </span>
         </h1>
         <p className="max-w-xl pt-5 mx-auto text-lg text-gray-600 dark:text-gray-400 md:text-lg">
-          The app that helps you connect with other nomads around you for less than what you spend on 1 coffee per month!
+          Nomap helps you connect with other nomads around you.
         </p>
         <div className="mt-6 text-center md:ml-6">
           <a
@@ -55,6 +61,6 @@ export default function Home() {
       </div>
     </div>
   </section>
-  </>
+  </div>
   );
 }

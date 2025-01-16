@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  min-width: 360px;
-  scroll-behavior: smooth;
-}
-
-#__next {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .sticky-nav {
   position: sticky;
   z-index: 50;
@@ -28,4 +17,10 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: rgb(39, 39, 39);
   outline: 1px solid rgb(33, 34, 34);
+}
+
+@layer base{
+  body {
+      @apply dark:bg-neutral-900 bg-slate-100
+  }
 }
