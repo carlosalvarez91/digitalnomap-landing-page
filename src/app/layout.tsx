@@ -14,20 +14,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nomap - Connect with Nomads around you",
+  metadataBase: new URL('https://digitalnomap.com'),
+  title: {
+    default: "Nomap - Connect with Nomads around you",
+    template: "%s | Nomap"
+  },
   description: "Discover and connect with digital nomads around you. Your global community, one tap away.",
+  applicationName: "Nomap",
+  keywords: ["digital nomads", "travel", "community", "networking"],
+  authors: [{ name: "Nomap Team" }],
+  creator: "Nomap Team",
+  publisher: "Nomap",
   openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://digitalnomap.com",
     title: "Nomap - Connect with Nomads Worldwide",
     description: "Discover and connect with digital nomads around you. Your global community, one tap away.",
-    images: ['/hero.png'],
-    type: 'website',
-    url: 'https://digitalnomap.com'
+    siteName: "Nomap",
+    images: [
+      {
+        url: '/hero.png',
+        width: 1200,
+        height: 630,
+        alt: "Nomap - Connect with Nomads"
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: "Nomap - Connect with Nomads around you",
     description: "Discover and connect with digital nomads around you. Your global community, one tap away.",
     images: ['/hero.png']
+  },
+  other: {
+    'og:image:width': '1200',
+    'og:image:height': '630',
+    'og:type': 'website',
+    'og:site_name': 'Nomap'
   }
 };
 
