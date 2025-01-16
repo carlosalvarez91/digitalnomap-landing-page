@@ -8,12 +8,32 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    const calculateTimeLeft = () => {
+      const difference = new Date("2025-01-31").getTime() - new Date().getTime();
+      
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      }
+    };
 
-  if (!mounted) return null;
+    const timer = setInterval(calculateTimeLeft, 1000);
+    calculateTimeLeft(); // Initial call
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="h-screen">
@@ -34,20 +54,43 @@ export default function Home() {
         <div className="mt-6 text-center md:ml-6">
           <a
             className="inline-flex items-center px-5 py-3 text-sm font-medium text-gray-300 transition duration-300 bg-black rounded hover:bg-gray-800 dark:hover:bg-gray-200 dark:text-gray-700 dark:bg-white"
-            aria-label="learn more"
+            aria-label="Apple Store"
             rel="noreferrer"
-            href="https://github.com/minor/plutonium/"
+            href="https://apps.apple.com/us/app/nomap/id6443891507"
           >
             <span className="flex justify-center">Apple store</span>
           </a>
           <br className="sm:hidden" />
             <a
               className="inline-flex items-center px-5 py-3 mt-2 ml-0 text-sm font-medium text-gray-700 transition duration-300 border rounded shadow dark:hover:border-gray-500 hover:shadow-md md:ml-2 dark:text-gray-300"
-              aria-label="learn more"
+              aria-label="Google Play"
+               rel="noreferrer"
+              href="https://play.google.com/store/apps/details?id=com.digitalnomap"
             >
               <span className="flex justify-center">Google Play</span>
             </a>
         </div>
+        <div className="mt-5 text-center">
+              <h1 className="block text-3xl mb-2 dark:text-gray-300">Launching soon</h1>
+              <div className="flex justify-center space-x-4">
+                <div className="flex flex-col items-center">
+                  <span className="text-2xl font-bold dark:text-white">{timeLeft.days}</span>
+                  <span className="text-sm dark:text-gray-400">Days</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-2xl font-bold dark:text-white">{timeLeft.hours}</span>
+                  <span className="text-sm dark:text-gray-400">Hours</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-2xl font-bold dark:text-white">{timeLeft.minutes}</span>
+                  <span className="text-sm dark:text-gray-400">Minutes</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-2xl font-bold dark:text-white">{timeLeft.seconds}</span>
+                  <span className="text-sm dark:text-gray-400">Seconds</span>
+                </div>
+              </div> 
+          </div>
       </div>
       <div className="w-full mx-auto md:w-1/2 flex justify-center">
         <Image 

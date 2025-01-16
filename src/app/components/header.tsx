@@ -9,7 +9,7 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="w-full sticky-nav">
+    <header className="w-full sticky-nav blurry-bg">
       <div className="flex flex-col flex-wrap max-w-5xl p-2.5 mx-auto md:flex-row">
         <div className="flex flex-row items-center justify-between p-2 md:p-1">
             <span className="mb-4 text-2xl font-medium text-black transition duration-300 hover:text-gray-300 dark:text-gray-300 dark:hover:text-white md:mb-0">
