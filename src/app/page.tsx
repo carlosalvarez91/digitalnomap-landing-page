@@ -52,42 +52,41 @@ export default function Home() {
           Nomap helps you connect with other nomads around you.
         </p>
         <div className="mt-6 text-center md:ml-6">
-          <a
-            className="inline-flex items-center px-5 py-3 text-sm font-medium text-gray-300 transition duration-300 bg-black rounded hover:bg-gray-800 dark:hover:bg-gray-200 dark:text-gray-700 dark:bg-white"
+        <a
+            className="inline-flex items-center px-5 py-3 text-sm font-medium text-gray-300 transition duration-300 bg-black rounded hover:bg-gray-800 dark:hover:bg-gray-200 dark:text-gray-700 dark:bg-white opacity-50 cursor-not-allowed"
             aria-label="Apple Store"
             rel="noreferrer"
-            href="https://apps.apple.com/us/app/nomap/id6443891507"
+            href="#"
           >
             <span className="flex justify-center">Apple store</span>
           </a>
           <br className="sm:hidden" />
             <a
-              className="inline-flex items-center px-5 py-3 mt-2 ml-0 text-sm font-medium text-gray-700 transition duration-300 border rounded shadow dark:hover:border-gray-500 hover:shadow-md md:ml-2 dark:text-gray-300"
+              className="inline-flex items-center px-5 py-3 mt-2 ml-0 text-sm font-medium text-gray-700 transition duration-300 border rounded shadow dark:hover:border-gray-500 hover:shadow-md md:ml-2 dark:text-gray-300 opacity-50 cursor-not-allowed"
               aria-label="Google Play"
-               rel="noreferrer"
-              href="https://play.google.com/store/apps/details?id=com.digitalnomap"
+              href="#"
             >
               <span className="flex justify-center">Google Play</span>
             </a>
         </div>
         <div className="mt-5 text-center">
-              <h1 className="block text-3xl mb-2 dark:text-gray-300">Launching soon</h1>
-              <div className="flex justify-center space-x-4">
+              <h1 className="block text-3xl mb-2 dark:text-gray-300">Launching soon 🚀</h1>
+              <div className="flex justify-center space-x-6 ">
                 <div className="flex flex-col items-center">
-                  <span className="text-2xl font-bold dark:text-white">{timeLeft.days}</span>
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.days}</span>
                   <span className="text-sm dark:text-gray-400">Days</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-2xl font-bold dark:text-white">{timeLeft.hours}</span>
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.hours}</span>
                   <span className="text-sm dark:text-gray-400">Hours</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-2xl font-bold dark:text-white">{timeLeft.minutes}</span>
-                  <span className="text-sm dark:text-gray-400">Minutes</span>
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.minutes}</span>
+                  <span className="text-sm dark:text-gray-400">Min</span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-2xl font-bold dark:text-white">{timeLeft.seconds}</span>
-                  <span className="text-sm dark:text-gray-400">Seconds</span>
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.seconds}</span>
+                  <span className="text-sm dark:text-gray-400">Sec</span>
                 </div>
               </div> 
           </div>
