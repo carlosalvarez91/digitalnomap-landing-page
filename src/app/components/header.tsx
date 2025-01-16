@@ -7,8 +7,7 @@ import DarkModeButton from "./DarkModeButton";
 
 export default function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-
+  const { theme } = useTheme();
 
   return (
     <header className="w-full sticky-nav blurry-bg">

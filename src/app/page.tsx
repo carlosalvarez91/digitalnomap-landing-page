@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
