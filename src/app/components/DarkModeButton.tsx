@@ -6,7 +6,7 @@ export default function DarkModeButton({ className }: { className?: string }) {
     <button
         aria-label="Toggle Dark Mode"
         type="button"
-        className={`w-10 h-10 p-3 ml-5 mr-0 bg-gray-200 rounded md:ml-0 md:mr-5 dark:bg-gray-800 ${className}`}
+        className={`w-10 h-10 p-3 ml-5 mr-5 mr-0 bg-gray-200 rounded md:ml-0 md:mr-5 dark:bg-gray-800 ${className}`}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
         <svg
