@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useTheme } from "next-themes";
 import Logo from "./logo";
-import Link from "next/link";
 import DarkModeButton from "./DarkModeButton";
 
 export default function Header() {
