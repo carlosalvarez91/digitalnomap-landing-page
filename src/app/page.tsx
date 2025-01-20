@@ -90,7 +90,7 @@ export default function Home() {
               </div> 
           </div>
       </div>
-      <div className="w-full mx-auto md:w-1/2 flex justify-center">
+      <div className="w-full mx-auto md:w-1/2 flex justify-center mb-32">
         <Image 
           src={theme === 'dark' ? '/dark.png' : '/light.png'}
          alt="Digitalnomap app"
