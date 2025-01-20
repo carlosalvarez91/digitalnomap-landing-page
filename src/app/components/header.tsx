@@ -9,7 +9,7 @@ export default function Header() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const { theme } = useTheme();
 
-  return (
+  /*return (
     <header className="w-full sticky-nav blurry-bg">
             <div className="flex flex-row items-center justify-between p-5 max-w-7xl mx-auto">
             <span className="mb-4 text-2xl font-medium text-black transition duration-300 hover:text-gray-300 dark:text-gray-300 dark:hover:text-white md:mb-0">
@@ -18,7 +18,7 @@ export default function Header() {
             <DarkModeButton className="ml-auto text-black outline-none dark:text-gray-300"/>
         </div>
     </header>
-  )
+  )*/
 
 
   return (
@@ -58,7 +58,7 @@ export default function Header() {
           }
         >
           <div className="flex flex-wrap items-center justify-center pt-1 pl-2 ml-1 space-x-8 md:space-x-16 md:mx-auto md:pl-14">
-            <Link
+           {/* <Link
               href="/#features"
               className="text-black transition duration-300 dark:text-gray-300 hover:text-gray-300"
             >
@@ -72,25 +72,32 @@ export default function Header() {
             </Link>
               <span className="text-black transition duration-300 dark:text-gray-300 hover:text-gray-300">
                 Demo
-              </span>
+              </span>*/}
           </div>
           <DarkModeButton />
-          <a
-            href="#"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="invisible dark:hover:border-gray-500 hover:shadow-md transition duration-300 mr-4 text-black border px-3 py-1.5 rounded dark:text-gray-300 md:visible"
-          >
-            Sign in
-          </a>
-          <a
-            href="#"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="invisible md:visible px-3 py-1.5 transition-colors hover:bg-gray-800 dark:hover:bg-gray-200 text-white dark:text-black bg-black dark:bg-white rounded"
-          >
-            Sign up
-          </a>
+            <a 
+                href="https://www.instagram.com/digitalnomap" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cursor-pointer text-black dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-300"
+              >
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="24" 
+                  height="24" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  className="feather feather-instagram"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
         </div>
       </div>
     </header>
