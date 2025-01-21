@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://digitalnomap.com",
-    title: "Nomap - Connect with Nomads Worldwide",
+    title: "Nomap - Connect with Nomads around you",
     description: "Discover and connect with digital nomads around you. Your global community, one tap away.",
     siteName: "Nomap",
     images: [

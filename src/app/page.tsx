@@ -52,7 +52,7 @@ export default function Home() {
         </p>
         <div className="mt-6 text-center md:ml-6">
         <a
-            className="inline-flex items-center px-5 py-3 text-sm font-medium text-gray-300 transition duration-300 bg-black rounded hover:bg-gray-800 dark:hover:bg-gray-200 dark:text-gray-700 dark:bg-white opacity-50 cursor-not-allowed"
+            className="inline-flex m-2 items-center px-5 py-3 text-sm font-medium text-gray-300 transition duration-300 bg-black rounded hover:bg-gray-800 dark:hover:bg-gray-200 dark:text-gray-700 dark:bg-white opacity-50 cursor-not-allowed"
             aria-label="Apple Store"
             rel="noreferrer"
             href="#"
