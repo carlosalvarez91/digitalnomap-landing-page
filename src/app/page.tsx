@@ -16,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = new Date("2025-01-31").getTime() - new Date().getTime();
+      const difference = new Date("2025-02-15").getTime() - new Date().getTime();
       
       if (difference > 0) {
         setTimeLeft({
