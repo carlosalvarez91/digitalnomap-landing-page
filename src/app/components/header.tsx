@@ -25,7 +25,13 @@ export default function Header() {
       <div className="flex flex-col flex-wrap max-w-5xl p-2.5 mx-auto md:flex-row">
         <div className="flex flex-row items-center justify-between p-2 md:p-1">
             <span className="mb-4 text-2xl font-medium text-black transition duration-300 hover:text-gray-300 dark:text-gray-300 dark:hover:text-white md:mb-0">
+            <a 
+                href="https://digitalnomap.com" 
+                rel="noopener noreferrer"
+                className="cursor-pointer text-black dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-300"
+              >
               <Logo dark={theme === "dark"} />
+            </a>
             </span>
           <button
             className="px-3 py-1 pb-4 ml-auto text-black outline-none dark:text-gray-300 md:hidden"

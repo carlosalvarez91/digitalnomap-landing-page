@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "./components/header";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Footer from "./components/footer";
 
 
 export default function Home() {
@@ -102,6 +103,7 @@ export default function Home() {
       </div>
     </div>
   </section>
+  <Footer />
   </div>
   );
 }
