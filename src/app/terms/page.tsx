@@ -3,8 +3,8 @@ import Header from '../components/header';
 
 export default function TermsAndConditions() {
   return (
-    <main className="h-screen">
-        <Header />
+    <main className="min-h-screen py-12">
+      <Header />
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-bold mb-8 text-center">Terms and Conditions</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-8 text-center">
@@ -15,7 +15,7 @@ export default function TermsAndConditions() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p>
-              Welcome to Nomap! These Terms and Conditions ("Terms") govern your use of the Nomap mobile application ("App") and any related services provided by Nomap ("Services"). By using Nomap, you agree to these Terms. If you do not agree, please do not use the App.
+              Welcome to Nomap! These Terms and Conditions (&quot;Terms&quot;) govern your use of the Nomap mobile application (&quot;App&quot;) and any related services provided by Nomap (&quot;Services&quot;). By using Nomap, you agree to these Terms. If you do not agree, please do not use the App.
             </p>
           </section>
 
@@ -41,7 +41,7 @@ export default function TermsAndConditions() {
             <ul className="list-disc pl-6 mt-2 space-y-1">
               <li>Use the App for any illegal or unauthorized purpose.</li>
               <li>Interfere with or disrupt the operation of the App.</li>
-              <li>Attempt to gain unauthorized access to other users' accounts.</li>
+              <li>Attempt to gain unauthorized access to other users&apos; accounts.</li>
               <li>Upload or share content that is false, misleading, harmful, or violates third-party rights.</li>
             </ul>
           </section>
@@ -70,7 +70,7 @@ export default function TermsAndConditions() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">8. Limitation of Liability</h2>
             <p>
-              Nomap is provided "as is" without warranties of any kind. We are not responsible for any losses, damages, or liabilities arising from your use of the App.
+              Nomap is provided &quot;as is&quot; without warranties of any kind. We are not responsible for any losses, damages, or liabilities arising from your use of the App.
             </p>
           </section>
 

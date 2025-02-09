@@ -7,7 +7,7 @@ export default function Support() {
       <Header />
       <div className="z-10 w-full flex items-center justify-center font-mono text-sm h-[500px]">
         <div className="flex flex-col gap-4">
-          <p>Need help? We're here to assist you!</p>
+          <p>Need help? We&apos;re here to assist you!</p>
           <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
             <p>Email: carlosalvarez1391@gmail.com</p>

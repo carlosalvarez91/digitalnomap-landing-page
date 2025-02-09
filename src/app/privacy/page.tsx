@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p>
-              Your privacy is important to us. This Privacy Policy explains how Nomap collects, uses, and protects your personal information when you use our mobile application ("App") and related services ("Services").
+              Your privacy is important to us. This Privacy Policy explains how Nomap collects, uses, and protects your personal information when you use our mobile application (&quot;App&quot;) and related services (&quot;Services&quot;).
             </p>
           </section>
 
