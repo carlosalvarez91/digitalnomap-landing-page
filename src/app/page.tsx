@@ -16,22 +16,33 @@ export default function Home() {
   });
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // New state for loading
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    setMessage('');
 
-    const res = await fetch('/api/waitlist', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email }),
-    });
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
     
-    const data = await res.json();
-    setMessage(data.message || data.error);
+      const data = await res.json();
+      setMessage(data.message || data.error);
+    } catch (error) {
+      setMessage('An error occurred. Please try again.');
+    } finally {
+      setIsLoading(false); // Stop loading
+    }
   };
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const difference = new Date("2025-02-15").getTime() - new Date().getTime();
+      const difference = new Date("2025-02-20").getTime() - new Date().getTime();
       
       if (difference > 0) {
         setTimeLeft({
@@ -67,7 +78,7 @@ export default function Home() {
         </p>
         <div className="mt-6 text-center md:ml-6">
 
-      <form onSubmit={handleSubmit} className="p-4">
+      <form onSubmit={handleSubmit} className="p-4 flex items-center flex-col">
         <input
           type="email"
           placeholder="Enter your email"
@@ -76,8 +87,14 @@ export default function Home() {
           required
           className="p-2 border rounded w-full"
         />
-        <button type="submit" className="mt-2 bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded">
-          Join the waiting list
+        <button type="submit" disabled={isLoading} className={`${isLoading && 'opacity-50'} mt-2 w-56 flex items-center justify-center bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded`}>
+          {isLoading && (
+          <svg className="animate-spin h-5 w-5 text-gray-600 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+          )}
+          Join Waitlist
         </button>
       </form>
       {message && <p className="mt-2 text-sm">{message}</p>}
