@@ -14,6 +14,20 @@ export default function Home() {
     minutes: 0,
     seconds: 0
   });
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const res = await fetch('/api/waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+    
+    const data = await res.json();
+    setMessage(data.message || data.error);
+  };
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -52,7 +66,23 @@ export default function Home() {
           Nomap helps you connect with other nomads around you.
         </p>
         <div className="mt-6 text-center md:ml-6">
-        <a
+
+      <form onSubmit={handleSubmit} className="p-4">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="p-2 border rounded w-full"
+        />
+        <button type="submit" className="mt-2 bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded">
+          Join the waiting list
+        </button>
+      </form>
+      {message && <p className="mt-2 text-sm">{message}</p>}
+
+        {/*<a
             className="inline-flex m-2 items-center px-5 py-3 text-sm font-medium text-gray-300 transition duration-300 bg-black rounded hover:bg-gray-800 dark:hover:bg-gray-200 dark:text-gray-700 dark:bg-white opacity-50 cursor-not-allowed"
             aria-label="Apple Store"
             rel="noreferrer"
@@ -67,7 +97,7 @@ export default function Home() {
               href="#"
             >
               <span className="flex justify-center">Google Play</span>
-            </a>
+            </a>*/}
         </div>
         <div className="mt-5 text-center">
               <h1 className="block text-3xl mb-2 dark:text-gray-300">Launching soon 🚀</h1>
