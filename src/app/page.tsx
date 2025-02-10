@@ -61,6 +61,8 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
+  console.log(timeLeft);
+
   return (
     <div className="h-screen">
     <Header />
@@ -79,6 +81,32 @@ export default function Home() {
         </p>
         <div className="mt-6 text-center md:ml-6">
 
+        <div className=" text-center">
+          <h1 className="block text-3xl mb-2 dark:text-gray-300">🚀 We&apos;re Launching Our Beta This February!</h1>
+            {/*
+            <div className="flex justify-center space-x-6 ">
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.days}</span>
+                  <span className="text-sm dark:text-gray-400">Days</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.hours}</span>
+                  <span className="text-sm dark:text-gray-400">Hours</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.minutes}</span>
+                  <span className="text-sm dark:text-gray-400">Min</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-3xl font-bold dark:text-white">{timeLeft.seconds}</span>
+                  <span className="text-sm dark:text-gray-400">Sec</span>
+                </div>
+              </div>
+              */} 
+        <h1 className="block text-lg mb-2 dark:text-gray-300">Be one of the first to experience Nomap before anyone else. Sign up now to join our exclusive waiting list and become an early adopter!</h1>
+
+          </div>
+
       <form onSubmit={handleSubmit} className="p-4 flex items-center flex-col">
         <input
           type="email"
@@ -95,7 +123,7 @@ export default function Home() {
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
           )}
-          Join Waitlist
+          Join Beta Waitlist
         </button>
       </form>
       {message && <p className="mt-2 text-sm">{message}</p>}
@@ -117,27 +145,6 @@ export default function Home() {
               <span className="flex justify-center">Google Play</span>
             </a>*/}
         </div>
-        <div className="mt-5 text-center">
-              <h1 className="block text-3xl mb-2 dark:text-gray-300">Launching soon 🚀</h1>
-              <div className="flex justify-center space-x-6 ">
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold dark:text-white">{timeLeft.days}</span>
-                  <span className="text-sm dark:text-gray-400">Days</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold dark:text-white">{timeLeft.hours}</span>
-                  <span className="text-sm dark:text-gray-400">Hours</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold dark:text-white">{timeLeft.minutes}</span>
-                  <span className="text-sm dark:text-gray-400">Min</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <span className="text-3xl font-bold dark:text-white">{timeLeft.seconds}</span>
-                  <span className="text-sm dark:text-gray-400">Sec</span>
-                </div>
-              </div> 
-          </div>
       </div>
       <div className="w-full mx-auto md:w-1/2 flex justify-center mb-32">
         <Image 
