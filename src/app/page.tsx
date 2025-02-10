@@ -34,7 +34,7 @@ export default function Home() {
       const data = await res.json();
       setMessage(data.message || data.error);
     } catch (error) {
-      setMessage('An error occurred. Please try again.');
+      setMessage('An error occurred. Please try again.', error);
     } finally {
       setIsLoading(false); // Stop loading
     }
