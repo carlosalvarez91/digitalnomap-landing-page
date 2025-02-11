@@ -82,7 +82,7 @@ export default function Home() {
         <div className="mt-6 text-center md:ml-6">
 
         <div className="mt-6 text-center">
-          <h1 className="block text-3xl mb-2 dark:text-gray-300">🚀 We&apos;re Launching Our Beta This February!</h1>
+          <h1 className="block text-3xl mb-2 dark:text-gray-300 font-bold">🚀 We&apos;re launching our Beta this February!</h1>
             {/*
             <div className="flex justify-center space-x-6 ">
                 <div className="flex flex-col items-center">
@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
               </div>
               */} 
-        <h1 className="block text-lg mb-2 dark:text-gray-300">Be one of the first to experience Nomap before anyone else. Sign up now to join our exclusive waiting list and become an early adopter!</h1>
+        <h1 className="block text-md mb-2 dark:text-gray-300">Be one of the first to experience Nomap before anyone else. Sign up now to join our exclusive waiting list and become an early adopter!</h1>
 
           </div>
 
