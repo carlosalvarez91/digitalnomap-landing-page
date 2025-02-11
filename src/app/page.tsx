@@ -81,7 +81,7 @@ export default function Home() {
         </p>
         <div className="mt-6 text-center md:ml-6">
 
-        <div className=" text-center">
+        <div className="mt-6 text-center">
           <h1 className="block text-3xl mb-2 dark:text-gray-300">🚀 We&apos;re Launching Our Beta This February!</h1>
             {/*
             <div className="flex justify-center space-x-6 ">
@@ -116,7 +116,7 @@ export default function Home() {
           required
           className="p-2 border rounded w-full"
         />
-        <button type="submit" disabled={isLoading} className={`${isLoading && 'opacity-50'} mt-2 w-56 flex items-center justify-center bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded`}>
+        <button type="submit" disabled={isLoading} className={`${isLoading && 'opacity-50'} mt-5 w-56 flex items-center justify-center bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded`}>
           {isLoading && (
           <svg className="animate-spin h-5 w-5 text-gray-600 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
