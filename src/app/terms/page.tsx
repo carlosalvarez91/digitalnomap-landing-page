@@ -47,42 +47,57 @@ export default function TermsAndConditions() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">5. Content Ownership</h2>
+            <h2 className="text-2xl font-semibold mb-4">5. User Conduct and Content Policy</h2>
+            <p>
+              By using Nomap, you agree to the following:
+            </p>
+            <ul className="list-disc pl-6 mt-2 space-y-1">
+              <li>You will not post, upload, or share any content that is objectionable, including but not limited to content that is abusive, harassing, defamatory, obscene, or otherwise offensive.</li>
+              <li>You will not engage in any behavior that is harmful, threatening, or abusive towards other users.</li>
+              <li>Nomap has a zero-tolerance policy for objectionable content or abusive users. Any violation of this policy may result in immediate suspension or termination of your account.</li>
+            </ul>
+            <p>
+              By agreeing to these Terms, you acknowledge that Nomap reserves the right to remove any content or terminate any account that violates these guidelines without prior notice.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">6. Content Ownership</h2>
             <p>
               All content provided on Nomap, including text, graphics, and trademarks, is owned by Nomap or its licensors. You may not copy, distribute, or reproduce any content without prior permission. By submitting content to Nomap, you grant us a worldwide, non-exclusive, royalty-free license to use, display, and distribute your content within the App.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">6. Third-Party Services</h2>
+            <h2 className="text-2xl font-semibold mb-4">7. Third-Party Services</h2>
             <p>
               Nomap may contain links to third-party websites or services. We are not responsible for any content, policies, or practices of third-party services and encourage you to review their terms before engaging with them.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">7. Termination</h2>
+            <h2 className="text-2xl font-semibold mb-4">8. Termination</h2>
             <p>
               We may suspend or terminate your access to Nomap at our discretion if you violate these Terms or for any other reason. Upon termination, you must cease using the App and delete your account.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">8. Limitation of Liability</h2>
+            <h2 className="text-2xl font-semibold mb-4">9. Limitation of Liability</h2>
             <p>
               Nomap is provided &quot;as is&quot; without warranties of any kind. We are not responsible for any losses, damages, or liabilities arising from your use of the App.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">9. Changes to These Terms</h2>
+            <h2 className="text-2xl font-semibold mb-4">10. Changes to These Terms</h2>
             <p>
               We may update these Terms from time to time. Continued use of Nomap after changes take effect constitutes your acceptance of the revised Terms.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4">10. Contact Us</h2>
+            <h2 className="text-2xl font-semibold mb-4">11. Contact Us</h2>
             <p>
               If you have any questions about these Terms, please contact us at carlosalvarez1391@gmail.com.
             </p>
