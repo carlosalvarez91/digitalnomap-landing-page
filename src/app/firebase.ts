@@ -16,6 +16,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-export const trackEvent = (eventName: string, eventParams?: Record<string, any>) => {
+export const trackEvent = (eventName: string, eventParams?: Record<string, string>) => {
   logEvent(analytics, eventName, eventParams);
 };
