@@ -17,7 +17,11 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false); // New state for loading
+  const [withNomap, setWithNomap] = useState(true);
 
+  const toggleNomap = () => {
+    setWithNomap(!withNomap);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,7 +65,21 @@ export default function Home() {
     return () => clearInterval(timer);
   }, []);
 
-  console.log(timeLeft);
+
+  const getImgSrc = () => {
+
+    if (withNomap) {
+      if (theme === 'dark') {
+        return '/apps_dark.png'
+      } 
+      return '/apps_light.png'
+    }
+    if (theme === 'dark') {
+      return '/dark.png'
+    } 
+    return '/light.png'
+
+  }
 
   return (
     <div className="h-screen">
@@ -82,7 +100,7 @@ export default function Home() {
         <div className="mt-6 text-center md:ml-6">
 
         <div className="mt-6 text-center">
-          <h1 className="block text-3xl mb-2 dark:text-gray-300 font-bold">🚀 We&apos;re launching our Beta this February!</h1>
+          <h1 className="block text-3xl mb-2 dark:text-gray-300 font-bold">🚀 We&apos;re launching our Beta this March!</h1>
             {/*
             <div className="flex justify-center space-x-6 ">
                 <div className="flex flex-col items-center">
@@ -146,10 +164,25 @@ export default function Home() {
             </a>*/}
         </div>
       </div>
-      <div className="w-full mx-auto md:w-1/2 flex justify-center mb-32">
+      <div className="w-full mx-auto md:w-1/2 mb-36 flex items-center flex-col justify-center">
+        <div className="flex flex-row items-center w-full flex-row-reverse">
+          <span className={`ml-2 font-bold ${withNomap ? 'line-through' : ''}`}>
+            With Nomap
+          </span>
+          <label className="inline-flex items-center cursor-pointer">
+            <input 
+              type="checkbox" 
+              checked={!withNomap} 
+              onChange={toggleNomap} 
+              className="sr-only peer"
+            />
+            <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+          </label>
+        </div>
+
         <Image 
-          src={theme === 'dark' ? '/dark.png' : '/light.png'}
-         alt="Digitalnomap app"
+          src={getImgSrc()}
+          alt="Digitalnomap app"
           width={500}
           height={500}
           className="w-80 h-auto"
