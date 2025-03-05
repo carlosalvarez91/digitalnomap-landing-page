@@ -4,6 +4,7 @@ import Header from "./components/header";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Footer from "./components/footer";
+import { initializeFirebase } from "./firebase";
 
 
 export default function Home() {
@@ -19,6 +20,8 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false); // New state for loading
   const [withNomap, setWithNomap] = useState(true);
 
+  initializeFirebase();
+  
   const toggleNomap = () => {
     setWithNomap(!withNomap);
   };

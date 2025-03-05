@@ -1,31 +1,24 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics, logEvent, isSupported, Analytics } from 'firebase/analytics';
+import { getAnalytics, logEvent, Analytics } from 'firebase/analytics';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-let analytics: Analytics;
+let analytics: Analytics | undefined
 
-isSupported().then((supported) => {
-  if (supported) {
-    analytics = getAnalytics();
-  } else {
-    console.warn("Firebase Analytics is not supported in this environment.");
+const initializeFirebase = () => {
+  if (typeof window !== 'undefined') {
+    const app = initializeApp(firebaseConfig)
+    analytics = getAnalytics(app)
   }
-});
+}
 
-const trackEvent = (eventName: string, eventParams?: Record<string, string>) => {
-  logEvent(analytics, eventName, eventParams);
-};
-
-export { analytics, app, trackEvent };
+export { analytics, logEvent, initializeFirebase }
