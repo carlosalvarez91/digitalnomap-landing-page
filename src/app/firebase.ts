@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics, logEvent } from 'firebase/analytics';
+import { getAnalytics, logEvent, isSupported, Analytics } from 'firebase/analytics';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -13,9 +13,19 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig);
-export const analytics = getAnalytics(app);
+const app = initializeApp(firebaseConfig);
+let analytics: Analytics;
 
-export const trackEvent = (eventName: string, eventParams?: Record<string, string>) => {
+isSupported().then((supported) => {
+  if (supported) {
+    analytics = getAnalytics();
+  } else {
+    console.warn("Firebase Analytics is not supported in this environment.");
+  }
+});
+
+const trackEvent = (eventName: string, eventParams?: Record<string, string>) => {
   logEvent(analytics, eventName, eventParams);
 };
+
+export { analytics, app, trackEvent };
