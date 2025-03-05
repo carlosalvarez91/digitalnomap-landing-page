@@ -19,8 +19,6 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false); // New state for loading
   const [withNomap, setWithNomap] = useState(true);
 
-  console.log(timeLeft);
-
   const toggleNomap = () => {
     setWithNomap(!withNomap);
   };
@@ -82,6 +80,8 @@ export default function Home() {
     return '/light.png'
 
   }
+
+  console.log('timeLeft:', timeLeft);
 
   return (
     <div className="h-screen">
