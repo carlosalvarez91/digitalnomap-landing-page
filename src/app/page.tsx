@@ -19,6 +19,8 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false); // New state for loading
   const [withNomap, setWithNomap] = useState(true);
 
+  console.log(timeLeft);
+
   const toggleNomap = () => {
     setWithNomap(!withNomap);
   };
