@@ -58,7 +58,7 @@ export default function Header() {
         </div>
         <div
           className={
-            "md:flex flex-grow items-center flex-row-reverse" +
+            "md:flex flex-grow items-center" +
             (navbarOpen ? " flex" : " hidden")
           }
         >
