@@ -4,8 +4,8 @@ interface LogoProps {
   dark?: boolean;
 }
 
-const lightColours: string[] = ['#ffffff', '#f87aff', '#76fff4', '#f1ff76', '#ffab2d','#ca73ff', '#ff7373'];
-const darkColours: string[] = ['#000000', '#8500cd', '#00cd78', '#cd0000', '#4000cd', '#cd00af', '#cd0048'];
+// const lightColours: string[] = ['#ffffff', '#f87aff', '#76fff4', '#f1ff76', '#ffab2d','#ca73ff', '#ff7373'];
+// const darkColours: string[] = ['#000000', '#8500cd', '#00cd78', '#cd0000', '#4000cd', '#cd00af', '#cd0048'];
 
 const Logo: React.FC<LogoProps> = ({ dark = false }) => {
 
