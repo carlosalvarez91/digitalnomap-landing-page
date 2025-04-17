@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-gray-100 dark:bg-gray-800 py-6 mt-8">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="text-sm text-gray-600 dark:text-gray-400 mb-4 md:mb-0">
-          © {currentYear} DigitalNoMap. All rights reserved.
+          © {currentYear} Digital nomap. All rights reserved.
         </div>
         <nav className="flex space-x-4">
           <Link 

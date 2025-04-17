@@ -105,7 +105,7 @@ export default function Home() {
         <div className="mt-6 text-center md:ml-6">
 
         <div className="mt-6 text-center">
-          <h1 className="block text-3xl mb-2 dark:text-gray-300 font-bold">🚀 We&apos;re launching our Beta this March!</h1>
+          <h1 className="block text-3xl mb-2 dark:text-gray-300 font-bold">🚀 We&apos;re launching our Beta this June!</h1>
             {/*
             <div className="flex justify-center space-x-6 ">
                 <div className="flex flex-col items-center">
